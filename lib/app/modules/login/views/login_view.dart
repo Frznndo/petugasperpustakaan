@@ -20,7 +20,7 @@ class LoginView extends GetView<LoginController> {
             children: [
               TextFormField(
                 controller: controller.usernameController,
-                decoration: InputDecoration(hintText: "Masukkan Username"),
+                decoration: InputDecoration(hintText: "Masukkan Username", icon: Icon(Icons.person_2_sharp)),
                 validator: (value){
                   if (value!.isEmpty) { //minimal username
                     return "Username tidak boleh kosong";
@@ -30,7 +30,7 @@ class LoginView extends GetView<LoginController> {
               ),
               TextFormField(
                   controller: controller.passwordController,
-                  decoration: InputDecoration(hintText: "Masukkan Password"),
+                  decoration: InputDecoration(hintText: "Masukkan Password", icon: Icon(Icons.lock_outline_sharp)),
                   validator: (value){
                     if (value!.length<2) { //minimal huruf password
                       return "password tidak boleh kosong";
